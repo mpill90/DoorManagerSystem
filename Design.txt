@@ -1,0 +1,6 @@
+The overall design of this application is quite simple, yet it is designed to be easily extensible.
+-I chose to implement a NoSQL database as it is now only a small demo app.
+-At the api I created a DBAdapter and an IDBAdapter interface.
+	-This decision makes it easy to change the data storage to any other, e.g. SQL Server or any other
+-At the client side there is a simple WPF application with basic CRUD and controller functions
+	-Due to time limitations the UI is a bit messy, the steps to increase code quailty are listed in the TODO file
