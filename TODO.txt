@@ -3,6 +3,7 @@ Implement Websocket instead of polling
 Add log framework
 Documentation for the code
 Change mockDB to sql
+Add facilities to the data structure
 Retry logics
 Increase level of abstraction
 Use timeouts
