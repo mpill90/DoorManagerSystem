@@ -1,0 +1,5 @@
+Are you planning to add any other operations to the door management? 
+Will you have different type of doors with different capabilities?
+How many users are you planning to have?
+Will you have different user roles (e.g. only admin can remove or add doors)?
+Are there any plans for multiple UIs (wpf and webapp access)?
