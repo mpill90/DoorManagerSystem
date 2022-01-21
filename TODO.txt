@@ -1,0 +1,15 @@
+Overall
+Implement Websocket instead of polling
+Add log framework
+Documentation for the code
+Change mockDB to sql
+Retry logics
+Increase level of abstraction
+Use timeouts
+Add tests
+
+UI
+Separate Controls to smaller chunks
+Use IoC framework
+Use commands with buttons instead of click event
+Disable buttons with invalid operations instead of MessageBox warnings
