@@ -1,6 +1,6 @@
 # DoorManagerSystem
 
-TODOs, design documentation and dev questions are included in the solution.
+TODOs, design documentation and dev questions are included in the solution OR you can also find them here: https://github.com/mpill90/DoorManagerSystem/wiki/
 
 ## To run this demo app:
 1. Clone this repository
