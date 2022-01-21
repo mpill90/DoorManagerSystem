@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="DoorManagerGUI.Controls.DoorList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoorManagerGUI.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Column="0" 
+                  Margin="10" 
+                  Name="DoorsListView" 
+                  ItemsSource="{Binding Doors}" 
+                  SelectionMode="Single" 
+                  SelectedItem="{Binding SelectedDoor}"
+                  SelectionChanged="DoorsListView_SelectionChanged"
+                  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="60" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Label" Width="160" DisplayMemberBinding="{Binding Label}" />
+                    <GridViewColumn Header="IsClosed?" Width="60" DisplayMemberBinding="{Binding IsClosed}" />
+                    <GridViewColumn Header="IsLocked?" Width="60" DisplayMemberBinding="{Binding IsLocked}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Margin="5" Grid.Column="0" Text="{Binding EditedDoor.Label}"></TextBox>
+                <Button Margin="5" Grid.Column="1" Click="SaveButton_Click">Save label</Button>
+            </Grid>
+
+            <Label Margin="10" Content="Change States"/>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <ToggleButton Grid.Column="0"
+                              Width="150"
+                              x:Name="OpenCloseBtn"
+                              Content="Open/Close"
+                              Click="OpenCloseBtn_Click"
+                              IsChecked="{Binding EditedDoor.IsClosed, Mode=OneWayToSource}"/>
+
+                <ToggleButton Grid.Column="1"
+                              Width="150"
+                              x:Name="LockUnlockBtn"
+                              Content="Lock/Unlock"
+                              Click="LockUnlockBtn_Click"
+                              IsChecked="{Binding EditedDoor.IsLocked, Mode=OneWayToSource}"/>
+            </Grid>
+
+            <Label Margin="10"  Content="Configure doors"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                    Width="150"
+                    Background="LightGreen"
+                    x:Name="CreateNewBtn"
+                    Content="Create new Door"
+                    Click="CreateNewBtn_Click"/>
+
+                <Button Grid.Column="1"
+                    Width="150"
+                    Background="IndianRed"
+                    x:Name="DeleteBtn"
+                    Content="Delete selected door"
+                    Click="DeleteBtn_Click"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
