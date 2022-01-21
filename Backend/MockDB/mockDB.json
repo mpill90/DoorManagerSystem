@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "label": "door1",
+    "isClosed": false,
+    "isLocked": false
+  },
+  {
+    "id": 1,
+    "label": "door2",
+    "isClosed": true,
+    "isLocked": false
+  },
+  {
+    "id": 2,
+    "label": "door3",
+    "isClosed": true,
+    "isLocked": true
+  },
+  {
+    "id": 3,
+    "label": "door4",
+    "isClosed": true,
+    "isLocked": true
+  },
+  {
+    "id": 4,
+    "label": "door5",
+    "isClosed": true,
+    "isLocked": false
+  }
+]
