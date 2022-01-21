@@ -7,5 +7,5 @@ TODOs, design documentation and dev questions are included in the solution.
 2. Open solution file with Visual Studio (preferably 2019 or up)
 3. Host the API project with IIS Express
 4. Start the gui
-  *Build the solution and run the exe
-  *Or Right click on project and Debug: Start new instance
+  * Build the solution and run the exe
+  * Or Right click on project and Debug: Start new instance
